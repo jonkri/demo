@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ett litet Vue.js-test</title>
+    <style>
+      img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <p v-for="x in myArray">{{x.toUpperCase()}}</p>
+      <hr />
+      <div style="border: solid 3px #f00" v-if="showErrorMessage">hej</div>
+      <h1 style="color: purple" v-else>else</h1>
+      <!-- <img :src="image" alt="" /> -->
+      <!-- <ol v-bind:type="typ">
+        <li>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere,
+          rerum!
+        </li>
+        <li>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere,
+          rerum!
+        </li>
+        <li>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere,
+          rerum!
+        </li>
+      </ol>
+      <h1 v-bind:title="name">Hej!</h1>
+      {{ name.toUpperCase() }} -->
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

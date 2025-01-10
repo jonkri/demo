@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>En liten chatt</title>
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Grön färg: #144d37
+    Grå färg: #232626
+    Bakgrundsfärg: #0a0a0a
+    Namnfärg: #53bdeb -->
+    <!-- <ol>
+      <li style="align-self: end">
+        <span class="reaction">🥰</span>
+        <span class="time">21:57 ✓</span>
+      </li>
+      <li style="align-self: start">
+        <p class="name">Mina</p>
+        Cảm ơn!
+        <span class="time">21:58 ✓</span>
+      </li>
+      <li style="align-self: start">
+        Good night!
+        <span class="time">21:59 ✓</span>
+      </li>
+      <li style="align-self: start">
+        <img alt="" src="cat.png" />
+        <span class="time">22:00 ⛌</span>
+      </li>
+    </ol> -->
+
+    <div id="app">
+      <ol>
+        <li
+          :style="{ alignSelf: message.self ? 'end' : 'start' }"
+          v-for="message in messages"
+        >
+          {{ message.text }}
+          <img alt="" :src="message.image" v-if="message.image !== undefined" />
+          <span class="reaction">{{ message.reaction }}</span>
+          <span class="time">
+            {{ message.time }}
+            <span v-if="message.delivered">✓</span>
+            <span v-else>⨯</span>
+          </span>
+        </li>
+      </ol>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

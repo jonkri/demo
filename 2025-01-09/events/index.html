@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <div id="app">
+      <div
+        v-on:mousemove="f"
+        style="background-color: gray; height: 200px; width: 200px"
+      ></div>
+      <input
+        type="button"
+        v-bind:value="'Counter: ' + counter"
+        v-on:click="onClick"
+      />
+      {{ 'Counter: ' + counter }}
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+      Vue.createApp({
+        data() {
+          return { counter: 0 };
+        },
+        methods: {
+          onClick() {
+            this.counter = this.counter + 1;
+          },
+          f(event) {
+            console.log("muspekaren har flyttat på sig", event);
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
