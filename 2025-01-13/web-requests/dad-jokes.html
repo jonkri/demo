@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dad Jokes</title>
+  </head>
+  <body>
+    <div id="app">{{ joke }}</div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+      Vue.createApp({
+        created() {
+          fetch("https://icanhazdadjoke.com/", {
+            headers: {
+              // Request JSON
+              Accept: "application/json",
+            },
+          })
+            .then((response) => response.json())
+            .then((result) => {
+              this.joke = result.joke;
+            });
+        },
+        data() {
+          return { joke: "Laddar ett skämt..." };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
