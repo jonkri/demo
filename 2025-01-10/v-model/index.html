@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- <input v-model="name" />
+      <input type="checkbox" v-model="isAdmin" />
+      {{ name }} {{ isAdmin }} -->
+      <!-- <label>
+        <input type="checkbox" value="Red" v-model="colors" /> Red
+      </label>
+      <label>
+        <input type="checkbox" value="Green" v-model="colors" /> Green
+      </label>
+      <label>
+        <input type="checkbox" value="Blue" v-model="colors" /> Blue {{ colors
+        }}
+      </label> -->
+      <label v-for="color in ['Red', 'Green', 'Blue']">
+        <input type="checkbox" :value="color" v-model="colors" /> {{ color }}
+      </label>
+      <ul>
+        <li v-for="color in colors">{{ color }}</li>
+      </ul>
+      <label>
+        <input type="radio" value="Red" v-model="favoriteColor" />
+        Red
+      </label>
+      <label>
+        <input type="radio" value="Green" v-model="favoriteColor" />
+        Red
+      </label>
+      <label>
+        <input type="radio" value="Blue" v-model="favoriteColor" />
+        Blue
+      </label>
+      <select v-model="operatingSystem">
+        <option>GNU/Linux</option>
+        <option>macOS</option>
+        <option>Windows</option>
+      </select>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

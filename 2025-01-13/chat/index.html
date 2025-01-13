@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>En liten chatt</title>
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app">
+      <ol>
+        <li
+          @click="like(message)"
+          :style="{ alignSelf: message.self ? 'end' : 'start' }"
+          v-for="message in messages"
+        >
+          {{ message.text }}
+          <img
+            alt=""
+            :src="message.image"
+            v-show="message.image !== undefined"
+          />
+          <span class="reaction">{{ message.reaction }}</span>
+          <span class="time">
+            <span v-if="message.delivered">✓</span>
+            <span v-else>⨯</span>
+          </span>
+        </li>
+      </ol>
+      <textarea v-model="messageText"></textarea>
+      <input @click="sendMessage" type="button" value="Skicka" />
+      <p>Konversationen består av {{ numberOfMessages }} meddelanden.</p>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+body {
+  background-color: #0a0a0a;
+  color: #fafafa;
+}
+
+li {
+  background-color: #232626;
+  border-radius: 1em;
+  margin-bottom: 0.5em;
+  padding: 0.5em 0.5em 1.5em;
+  position: relative;
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.name {
+  color: #53bdeb;
+  margin: 0 0 0.2em;
+}
+
+.reaction {
+  background-color: #232626;
+  border-radius: 1em;
+  bottom: -0.7em;
+  position: absolute;
+  right: 0.7em;
+  z-index: 1;
+}
+
+.time {
+  background-color: #232626;
+  border-radius: 1em;
+  bottom: 0.5em;
+  color: #888;
+  font-size: 0.8em;
+  position: absolute;
+  right: 0.7em;
+}

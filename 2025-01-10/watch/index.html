@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <input v-model="name" />
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+      Vue.createApp({
+        data() {
+          return { name: "Jane Doe" };
+        },
+        watch: {
+          name(newName, oldName) {
+            console.log(`Namnet har ändrats från ${oldName} till ${newName}`);
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
