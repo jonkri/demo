@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>En liten chatt</title>
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app">
+      <ol>
+        <message :message="message" v-for="message in messages"></message>
+      </ol>
+      <textarea v-model="messageText"></textarea>
+      <input @click="sendMessage" type="button" value="Skicka" />
+      <number-of-messages :messages="messages"></number-of-messages>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
