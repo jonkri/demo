@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>En liten chatt</title>
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app">
+      <nav>
+        <ul>
+          <li>
+            <router-link to="/">Hem</router-link>
+          </li>
+          <li>
+            <router-link to="/messages/JSU24">Meddelanden</router-link>
+          </li>
+        </ul>
+      </nav>
+      <router-view></router-view>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
