@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "axios": "^1.7.9",
+    "express": "^4.21.2",
+    "moment": "^2.30.1"
+  },
+  "name": "mitt-lilla-projekt",
+  "version": "0.0.1",
+  "description": "Ett exempelprojekt.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jon Kristensen",
+  "license": "ISC"
+}
